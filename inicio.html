@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="pt"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ZAYA FRAGRANCES — Alta Perfumaria em Luanda</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0D0D0D',
+              dark: '#161616',
+              stone: '#8E8E8E',
+              border: '#EAEAEA',
+              lightBg: '#FDFBF9',
+              neutralBg: '#F7F5F0',
+            }
+          },
+          boxShadow: {
+            'luxury': '0 12px 36px -8px rgba(0, 0, 0, 0.06)',
+            'luxury-hover': '0 20px 45px -6px rgba(0, 0, 0, 0.10)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Typography & Micro-Interactions -->
+<style data-purpose="typography">
+    body {
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif-display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.025em;
+    }
+    .letter-luxury {
+      letter-spacing: 0.22em;
+    }
+  </style>
+<style data-purpose="custom-decorations">
+    .product-shadow {
+      box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.05);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .product-shadow:hover {
+      box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="bg-[#FFFFFF] text-brand-black font-sans antialiased selection:bg-brand-black selection:text-white">
+<!-- BEGIN: TopAnnouncementBar -->
+<aside class="w-full bg-[#111111] text-white text-[11px] font-medium tracking-widest uppercase py-2.5 px-4 text-center border-b border-neutral-800" data-purpose="announcement-bar">
+<div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+<span class="">Entregas rápidas em Luanda</span>
+<span class="text-neutral-500">•</span>
+<span class="">Encomendas diretas via WhatsApp:</span>
+<a class="font-semibold underline underline-offset-4 hover:text-neutral-300 transition-colors" href="https://wa.me/244923000000" rel="noopener noreferrer" target="_blank">
+        +244 923 000 000
+      </a>
+</div>
+</aside>
+<!-- END: TopAnnouncementBar -->
+<!-- BEGIN: NavigationHeader -->
+<header class="w-full bg-white/95 sticky top-0 z-50 backdrop-blur-md border-b border-[#F0EFEB]" data-purpose="main-navigation">
+<div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+<!-- Brand Logo / Wordmark -->
+<div class="flex-1 flex items-center">
+<a class="serif-display text-2xl md:text-3xl font-semibold tracking-[0.18em] uppercase text-black hover:opacity-90 transition-opacity" href="#">
+          ZAYA <span class="font-light text-base tracking-[0.3em] block md:inline md:text-sm md:ml-1 text-neutral-600">FRAGRANCES</span>
+</a>
+</div>
+<!-- Centered Navigation Links -->
+<nav class="hidden lg:flex items-center gap-9 text-[13px] tracking-[0.08em] font-medium text-neutral-700" data-purpose="desktop-nav">
+<a class="text-black font-semibold border-b border-black pb-0.5" href="#">Início</a>
+<a class="hover:text-black transition-colors" href="#catalogo">Coleção</a>
+<a class="hover:text-black transition-colors" href="#homem">Homem</a>
+<a class="hover:text-black transition-colors" href="#mulher">Mulher</a>
+<a class="hover:text-black transition-colors" href="#unissexo">Unissexo</a>
+<a class="hover:text-black transition-colors" href="#contacto">Contacto</a>
+</nav>
+<!-- Search, Wishlist & Bag Actions -->
+<div class="flex-1 flex items-center justify-end gap-5">
+<!-- Compact Sleek Search Bar -->
+<div class="relative hidden sm:block w-48 xl:w-56">
+<input class="w-full bg-neutral-100/80 border-0 rounded-full py-1.5 pl-4 pr-9 text-xs placeholder:text-neutral-400 focus:ring-1 focus:ring-black transition" placeholder="Pesquisar..." type="search">
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</div>
+<!-- Wishlist Icon -->
+<button aria-label="Lista de Desejos" class="p-2 text-neutral-700 hover:text-black transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+</button>
+<!-- Shopping Bag with Counter Badge -->
+<button aria-label="Saco de Compras" class="relative p-2 text-neutral-700 hover:text-black transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+<span class="absolute top-1 right-0 bg-black text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-semibold">0</span>
+</button>
+</div>
+</div>
+</header>
+<!-- END: NavigationHeader -->
+<!-- BEGIN: HeroSection -->
+<main>
+<section class="relative max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-14 pb-20 overflow-hidden" data-purpose="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Editorial Copy Area -->
+<div class="lg:col-span-7 flex flex-col justify-center pr-0 lg:pr-8">
+<!-- Editorial Star Glyphs -->
+<div class="flex items-center gap-2 text-black mb-4">
+<span class="text-xl leading-none">✦</span>
+<span class="text-xs uppercase tracking-[0.25em] font-medium text-neutral-400">Atelier de Alta Perfumaria</span>
+</div>
+<!-- Main Hero Editorial Headline -->
+<h1 class="serif-display text-[46px] sm:text-[62px] md:text-[76px] lg:text-[84px] leading-[0.98] font-normal tracking-tight text-neutral-900 mb-6">
+            O perfume é a <br>
+<span class="italic font-light">assinatura</span> que <br>
+<span class="font-medium">ninguém esquece.</span>
+</h1>
+<!-- Secondary Subtitle -->
+<p class="text-neutral-600 text-sm md:text-base max-w-lg leading-relaxed mb-10 font-light">
+            Descubra a nossa coleção curada de fragrâncias para ele, para ela e para todos. Peça a sua fragrância de eleição com reserva direta e entrega rápida em Luanda.
+          </p>
+<!-- Signature Pill CTA Button -->
+<div>
+<a class="inline-flex items-center gap-5 bg-brand-black text-white text-xs md:text-sm tracking-wider uppercase font-medium pl-8 pr-2.5 py-2.5 rounded-full hover:bg-neutral-800 transition-all group shadow-lg shadow-black/10" href="#catalogo">
+<span class="">Explorar Coleção</span>
+<span class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+</a>
+</div>
+</div>
+<!-- Right Hero Visual -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden bg-neutral-100 shadow-2xl" style="background-color: rgb(243, 241, 238);">
+<img alt="Modelo a segurar um frasco de perfume Zaya Fragrances" class="w-full h-full object-cover filter saturate-[0.95] contrast-[1.05]" style="object-position: center top;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBHzBtLBvEQxFIbJUzD_Vmxu-v8NTNkV7qkdej7M6GiAnPt30h5XXZAwIYYgw-WlKEch_KBefxyLiDg1lXFM2hLrSEmE90RhkC3NNpfNe3ELBslxLap9HkvF5WbMNImenazJrjHJ1zO1_3Tq0fYsbqdYibW88YxCFDZetccrxvHnKuHpwuR6gXsdWSI9cS2yOdEaWosm7SRd4Evqa9k5GxNsjHmpW0kY3b5Wpxchz_MavI39j_WTR">
+<!-- Overlay Badge -->
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md px-5 py-4 rounded-xl flex items-center justify-between border border-white/40">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-neutral-500 font-semibold">Exclusivo em Angola</p>
+<p class="serif-display text-lg font-semibold text-neutral-900 leading-tight">Fragrâncias Originais Importadas</p>
+</div>
+<span class="text-xs bg-black text-white px-2.5 py-1 rounded-full uppercase tracking-wider font-medium">100% Autêntico</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: BrandPartnerStrip -->
+<section class="border-y border-neutral-100 bg-[#FDFDFC] py-8" data-purpose="brand-partners">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex flex-wrap items-center justify-between gap-6 md:gap-12 opacity-80 filter grayscale hover:grayscale-0 transition duration-300">
+<span class="font-serif tracking-[0.25em] text-lg font-bold">DIOR</span>
+<span class="font-sans font-black tracking-[0.18em] text-base">TOM FORD</span>
+<span class="font-serif tracking-[0.3em] text-base font-semibold">CHANEL</span>
+<span class="font-sans font-light tracking-[0.2em] text-base">CALVIN KLEIN</span>
+<span class="font-serif tracking-[0.2em] text-base uppercase">CLINIQUE</span>
+<span class="font-serif tracking-[0.18em] text-base font-semibold">DOLCE &amp; GABBANA</span>
+</div>
+</div>
+</section>
+<!-- END: BrandPartnerStrip -->
+<!-- BEGIN: PopularProductsSection -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-purpose="popular-products" id="catalogo">
+<!-- Section Title -->
+<div class="text-center mb-16">
+<p class="text-[11px] uppercase tracking-[0.25em] text-neutral-400 font-medium mb-2">Seleção Premium</p>
+<h2 class="serif-display text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
+          Mais Vendidos
+        </h2>
+<div class="w-10 h-[1.5px] bg-neutral-900 mx-auto mt-4"></div>
+</div>
+<!-- 4 Column Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Rose Éclat Eau de Parfum" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMm-fhHAvAZ8SyYEe3v6zI5HBrBzotLWllJI3H-PspTyaFqCO16QcwHdJiUg6ifm3w7XCFTJNXj7xVT7VIAHjhGxgDv-M5TmQeIfb4RWRNTonm8Obbbztsd_5rAcklWDI46wAQ0c2ZXaRsc7A5bjF3jNebxDKpJo0wJnwVPDPgLAiT5yApOs62anPAaNA-x8cs_ezQRunxbpEaagaLuuax8RWCXcmuTkDL9qLmzg">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Rose Éclat</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Parfum • 100ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">65.000 Kz</span>
+<button aria-label="Comprar Rose Éclat" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Noir Oud Eau de Parfum" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyWwlxRasVu5kHG65VzUGeQsQjTz2MH6NoxrAOtq95EF3L_flZT-Gjrr2VV7PinuaAcU3m-NshhclaAuUVWSaxUFkXwEZCDBX9JM3kiEYCnKN3AVGEwWHwHEJFEptydMMZtzFY-MsB6hyYTX0p7RUgf855izyx9eoom2B3aHmtVdHaXPcuPaaLu9bgXfI7R2P9nv0D1wHRUkcMZZsX_dijoxDegh-Nq-JJxbcJWHI">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Noir Oud</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Parfum • 100ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">85.000 Kz</span>
+<button aria-label="Comprar Noir Oud" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Citrus Aura Eau de Toilette" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApIsq_iySY9N4MhbEqebSIZ2NvjMhGCxirCOSMfwAaTejqq1BnfiYvdboJ9TrafIl3BH8Rmw-2_M1_V89IZFzKxYvoN0OLT426Wztxl47RiawTElRVnbNFTQn95aiGlTOy5s9qYRxJLcFlFwL86PAsyMT1SVyPuGgPwj86fh5oEdEVi_EJLSjBzm05ugVbtvdkFsxfpDwPZawFv_7Y6ZNOMJfBB6QGACBoJls71zc">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Citrus Aura</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Toilette • 50ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">38.000 Kz</span>
+<button aria-label="Comprar Citrus Aura" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Velvet Amber Parfum" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO0MWqsXMDcfhBwukSB1MK8ceOqo2cfRhe6LtBwX1B8gkAIid9mnHGbgBVFyUImQBg-cYHxj4-zxdkpEX5957Dc32hKJrr_vHiUySs8-vOUo8D3wU9OmoCMpgtbYKCa_h5sqbQ09xjUly3croig0wwdoQWeK4Fw_Gjq3-yCbpGz-0T1FVvqLGRHkQfJcC_NcR5XOy7B40KJXm_a3YoAl-3YHJYLupgh2_hDRDF_Do">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Velvet Amber</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Extrait de Parfum • 50ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">72.000 Kz</span>
+<button aria-label="Comprar Velvet Amber" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: PopularProductsSection -->
+<!-- BEGIN: EditorialCategoryBanners (Matching Reference 3-Photo Grid) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-10" data-purpose="editorial-category-grid">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[580px]">
+<!-- Left Big Editorial Image: Para Ela -->
+<div class="relative rounded-2xl overflow-hidden group min-h-[460px] md:min-h-full bg-neutral-100" id="mulher">
+<img alt="Modelo a segurar um frasco de perfume Zaya Fragrances" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" style="object-position: center 20%;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBHzBtLBvEQxFIbJUzD_Vmxu-v8NTNkV7qkdej7M6GiAnPt30h5XXZAwIYYgw-WlKEch_KBefxyLiDg1lXFM2hLrSEmE90RhkC3NNpfNe3ELBslxLap9HkvF5WbMNImenazJrjHJ1zO1_3Tq0fYsbqdYibW88YxCFDZetccrxvHnKuHpwuR6gXsdWSI9cS2yOdEaWosm7SRd4Evqa9k5GxNsjHmpW0kY3b5Wpxchz_MavI39j_WTR">
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-8 left-8">
+<a class="inline-block bg-white text-black px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-black hover:text-white transition-all shadow-md" href="#mulher">
+              Para Ela
+            </a>
+</div>
+</div>
+<!-- Right Stacked Editorial Images -->
+<div class="grid grid-rows-2 gap-6">
+<!-- Top Right Photo: Para Ele -->
+<div class="relative rounded-2xl overflow-hidden group min-h-[260px] bg-neutral-100" id="homem">
+<img alt="Coleção de Perfumes Para Ele" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiHcPzn3PPqdku3ibs9R0M7mn0F9fsFclsfXlwP8z4O4WYQVS44Gvv0F6fDqK-phKbzUkKjx458ao0BCzEw_5HR5nihtEnFQl1hX421OZCwv1qdGJ0tWQ9cGULYy1sthZgbGtxvihElU_knW6orWQAAxnZqJhOUHn7wknUp6oSZczEczIe5Q89zrLH9ukoeTh0XM5qr2P42lkeeTbCCHp3JyewReuRpRjLxLBmaAo">
+<div class="absolute inset-0 bg-black/15 group-hover:bg-black/25 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<a class="inline-block bg-white text-black px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-black hover:text-white transition-all shadow-md" href="#homem">
+                Para Ele
+              </a>
+</div>
+</div>
+<!-- Bottom Right Photo: Unissexo -->
+<div class="relative rounded-2xl overflow-hidden group min-h-[260px] bg-neutral-100" id="unissexo">
+<img alt="Frasco de fragrância em pedestal de pedra unissexo" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVV3htdezkBeg2Ve_VQYX0x0kmkASpJMIpD_tNMejyrCOFbSXF4szOZzEaVNmxc1tiTEs7sDUHUPAOj5VV4z21cz-_u9950pJY0iVwqeqS_mHMbk45XGiJHOkSTD_scFvZHGmV7CbZsy5AIqYoBF9ulUeDpGXCwNVWl7Kw_Deo3-PHGBQIbAZWs2DCe59rUrbMe8hQB8wqrEzxJL3OS-ifR0UIzos1nEYd17-1rz8">
+<div class="absolute inset-0 bg-black/15 group-hover:bg-black/25 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<a class="inline-block bg-black text-white px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-white hover:text-black transition-all shadow-md" href="#unissexo">
+                Unissexo
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EditorialCategoryBanners -->
+<!-- BEGIN: NewProductsSection -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-purpose="new-products">
+<!-- Section Title -->
+<div class="text-center mb-16">
+<p class="text-[11px] uppercase tracking-[0.25em] text-neutral-400 font-medium mb-2">Recém-chegados</p>
+<h2 class="serif-display text-4xl md:text-5xl font-medium tracking-tight text-neutral-900">
+          Novidades
+        </h2>
+<div class="w-10 h-[1.5px] bg-neutral-900 mx-auto mt-4"></div>
+</div>
+<!-- 4 Column Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<span class="absolute top-3 left-3 bg-black text-white text-[9px] font-semibold uppercase px-2 py-0.5 rounded tracking-widest">Novo</span>
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Blanc Musk Eau de Parfum" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUkp4mTsTMhYiY-PiPIlVLCeI-og65Z6WvKJfIzWfNCF_J8rbmjJiJoCYF7HXVSCzOUaywXW8jjMLB5mTyCsGv1weL_VmSBB-Qe6TpWGF4EpQyjtfOCecinV-s-g8LVZvPmSrRJ0ekxzILJI4_AI1Gz_KGR6VF_IKjC8A-4DmM57KYJrAj5jET-_4wSSW0s4eTR87AWisnCQyE13j0IXI3KeaqxF3AKOX-TEP8kmY">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Blanc Musk</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Parfum • 100ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">58.000 Kz</span>
+<button aria-label="Comprar Blanc Musk" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Santal Nuit Eau de Parfum" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJou0MZo5atP8DSlGuTQLLu_HU0WnWSOtOTioPnDfjFspqSXVMMRihRMuGXi9nwd97o4Sr8fRNMLQFbI3_fjacCZack8ugFSDK_Tti9BeuwTySp5UW16wlil-TOrmkYwZRzplUaHBnnUi7ErvQEtrdwIIAT41OGHTpQMvzfb5JL00h1wosYNOlHNPqtFzLJq-dvL9-1NwqGymoV2auwAz3vs8H6wMiRMl8vs6q1Mw">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Santal Nuit</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Parfum • 75ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">79.000 Kz</span>
+<button aria-label="Comprar Santal Nuit" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Fleur d'Or Eau de Parfum" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaFMMsCl4t7lEFqKRtRHXLKM6WTsH9Ox9G4qv93YK9VZzq-qg1sw2jOg8JDa65g86KLn3YtqJDZ750pcbJJ9jpivYnSBs1j7LeCN1F4G1pim-3zRBd8dhtp5KZHtSTxYo7s0LAzgkqHhDlhZH4PVfeQAFZJBjgfauJwNb274At0iRMW3TwQwBVIhT7f2sOqSi1le1Xgei12fNIB9NvlkdxnKBajfPkCjtTV5REAHo">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Fleur d'Or</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Parfum • 50ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">54.000 Kz</span>
+<button aria-label="Comprar Fleur d'Or" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-white rounded-[16px] p-6 border border-neutral-100 product-shadow flex flex-col justify-between group">
+<div class="relative w-full aspect-square bg-[#FBFBFB] rounded-xl flex items-center justify-center mb-5 overflow-hidden">
+<button aria-label="Adicionar aos favoritos" class="absolute top-3 right-3 text-neutral-400 hover:text-black transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</button>
+<img alt="Bois Sauvage Eau de Toilette" class="w-3/4 h-3/4 object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJNZqAXyGHYpvc6tPuCe648A7U94amYsITRIWqtYBqUXYv8kpN1Uym7vSqi1JEd6Q9He0MDoKT5oAfb8Tohpbepwf5uuxh9ewMzMdX4montXH_S5PakRekXbxD-9sHMZguVMfgosCnF5salz-q5NGhYJ2FplPhCpAFJHcK_UlG_bP_-1RxQSJz9jaDTU8GywAzdI5NfyI-hxZA3W0h1EJq86939mZFzjU7mGh4K7s">
+</div>
+<div>
+<h3 class="serif-display text-lg font-semibold text-neutral-900">Bois Sauvage</h3>
+<p class="text-[12px] text-neutral-500 mb-4 tracking-wide">Eau de Toilette • 100ml</p>
+<div class="flex items-center justify-between pt-2 border-t border-neutral-100">
+<span class="text-sm font-semibold tracking-tight text-neutral-900">46.000 Kz</span>
+<button aria-label="Comprar Bois Sauvage" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-black hover:text-white flex items-center justify-center transition-colors">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: NewProductsSection -->
+<!-- BEGIN: WhatsAppReservationHighlight -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 pb-24" data-purpose="whatsapp-reservation">
+<div class="bg-[#F8F7F4] border border-[#EBE7DF] rounded-3xl p-8 md:p-14 text-center">
+<span class="text-2xl mb-2 inline-block">✦</span>
+<h2 class="serif-display text-3xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-3">
+          Reserve pelo WhatsApp.
+        </h2>
+<p class="text-neutral-600 text-sm md:text-base max-w-xl mx-auto mb-12 font-light">
+          Simples, rápido e sem complicações. Acompanhamento personalizado da sua escolha com consultoria olfativa.
+        </p>
+<!-- 3 Simple Steps -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-12">
+<div class="bg-white/80 backdrop-blur rounded-2xl p-6 border border-neutral-200/60">
+<span class="text-xs font-mono font-semibold text-neutral-400">01</span>
+<h3 class="serif-display text-xl font-semibold mt-2 mb-1">Escolha</h3>
+<p class="text-neutral-600 text-xs leading-relaxed">
+              Navegue pelo catálogo e escolha a sua fragrância de eleição ou fale connosco para sugestões personalizadas.
+            </p>
+</div>
+<div class="bg-white/80 backdrop-blur rounded-2xl p-6 border border-neutral-200/60">
+<span class="text-xs font-mono font-semibold text-neutral-400">02</span>
+<h3 class="serif-display text-xl font-semibold mt-2 mb-1">Reserve</h3>
+<p class="text-neutral-600 text-xs leading-relaxed">
+              Envie uma mensagem direta pelo WhatsApp indicando os perfumes pretendidos e o local de entrega.
+            </p>
+</div>
+<div class="bg-white/80 backdrop-blur rounded-2xl p-6 border border-neutral-200/60">
+<span class="text-xs font-mono font-semibold text-neutral-400">03</span>
+<h3 class="serif-display text-xl font-semibold mt-2 mb-1">Receba em Luanda</h3>
+<p class="text-neutral-600 text-xs leading-relaxed">
+              Confirmamos a disponibilidade no momento e coordenamos a entrega pontual ao seu endereço.
+            </p>
+</div>
+</div>
+<!-- WhatsApp Direct CTA -->
+<a class="inline-flex items-center gap-3 bg-brand-black text-white text-xs md:text-sm font-semibold tracking-wider uppercase px-8 py-4 rounded-full hover:bg-neutral-800 transition shadow-lg" href="https://wa.me/244923000000?text=Ol%C3%A1%2C%20gostaria%20de%20reservar%20um%20perfume%20na%20Zaya%20Fragrances." rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+<span class="">Fazer Encomenda por WhatsApp</span>
+</a>
+</div>
+</section>
+<!-- END: WhatsAppReservationHighlight -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-brand-black text-white pt-20 pb-12 border-t border-neutral-800" data-purpose="footer" id="contacto">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<!-- Footer Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-neutral-800">
+<!-- Brand Summary -->
+<div class="lg:col-span-2">
+<span class="serif-display text-2xl font-semibold tracking-[0.2em] uppercase block mb-4">
+            ZAYA FRAGRANCES
+          </span>
+<p class="text-neutral-400 text-xs leading-relaxed max-w-sm font-light mb-6">
+            A sua casa de fragrâncias de assinatura em Luanda. Perfumes de prestígio internacional, selecionados com rigor para elevar cada instante do seu dia.
+          </p>
+<div class="text-xs text-neutral-400 space-y-1">
+<p class=""><span class="text-neutral-200">Localização:</span> Luanda, Angola</p>
+<p class=""><span class="text-neutral-200">Contacto:</span> +244 923 000 000</p>
+<p class=""><span class="text-neutral-200">Email:</span> contacto@zayafragrances.ao</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div>
+<h4 class="text-xs font-semibold uppercase tracking-widest text-neutral-200 mb-4">Coleções</h4>
+<ul class="text-xs space-y-2.5 text-neutral-400">
+<li class=""><a class="hover:text-white transition" href="#mulher">Fragrâncias Femininas</a></li>
+<li class=""><a class="hover:text-white transition" href="#homem">Fragrâncias Masculinas</a></li>
+<li class=""><a class="hover:text-white transition" href="#unissexo">Linha Unissexo</a></li>
+<li class=""><a class="hover:text-white transition" href="#catalogo">Mais Vendidos</a></li>
+<li class=""><a class="hover:text-white transition" href="#catalogo">Edições Limitadas</a></li>
+</ul>
+</div>
+<!-- Customer Support -->
+<div>
+<h4 class="text-xs font-semibold uppercase tracking-widest text-neutral-200 mb-4">Apoio ao Cliente</h4>
+<ul class="text-xs space-y-2.5 text-neutral-400">
+<li class=""><a class="hover:text-white transition" href="#">Entregas em Luanda</a></li>
+<li class=""><a class="hover:text-white transition" href="#">Como Reservar</a></li>
+<li class=""><a class="hover:text-white transition" href="#">Autenticidade Garantida</a></li>
+<li class=""><a class="hover:text-white transition" href="#">Termos &amp; Condições</a></li>
+<li class=""><a class="hover:text-white transition" href="#">FAQ</a></li>
+</ul>
+</div>
+<!-- Newsletter Signup -->
+<div>
+<h4 class="text-xs font-semibold uppercase tracking-widest text-neutral-200 mb-4">Newsletter</h4>
+<p class="text-xs text-neutral-400 mb-4 font-light">Receba novidades e avisos de reposição exclusiva.</p>
+<form class="space-y-2">
+<input class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3.5 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white transition" placeholder="O seu e-mail" type="email">
+<button class="w-full bg-white text-black text-xs font-medium uppercase tracking-wider py-2 rounded-lg hover:bg-neutral-200 transition" type="submit">
+              Subscrever
+            </button>
+</form>
+</div>
+</div>
+<!-- Footer Bottom Copyright & Currency -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-neutral-500 text-[11px] gap-4">
+<div class="">
+          © 2025 Zaya Fragrances. Todos os direitos reservados.
+        </div>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2 text-neutral-400">
+<span class="">Moeda:</span>
+<strong class="text-white font-medium">Kwanza Angolano (AOA - Kz)</strong>
+</span>
+<span class="">Luanda • Angola</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+</body></html>
